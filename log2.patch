@@ -1,0 +1,15 @@
+In newlib <math.h>, log2 is not a function but a cpp macro; 
+while the latter suffices for bytecode, native compilation would lead to 
+an undefined symbol at link time.
+
+--- stubs.c.orig	2008-01-10 21:37:50.062500000 -0600
++++ stubs.c	2008-01-10 21:39:24.375000000 -0600
+@@ -25,6 +25,8 @@
+ }
+ value ml_cbrt(value x) { return copy_double(cbrt(Double_val(x))); }
+ value ml_logb(value x) { return copy_double(logb(Double_val(x))); }
++#undef log2
++double log2(double x) { return log (x) / M_LOG2_E; }
+ value ml_log2(value x) { return copy_double(log2(Double_val(x))); }
+ value ml_log1p(value x) { return copy_double(log1p(Double_val(x))); }
+ value ml_expm1(value x) { return copy_double(expm1(Double_val(x))); }

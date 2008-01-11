@@ -1,0 +1,18 @@
+ORIG_PN="mathlib"
+
+inherit ocaml
+
+DESCRIPTION="OCaml math library"
+HOMEPAGE="http://raevnos.pennmush.org/code/${ORIG_PN}/"
+SRC_URI="http://raevnos.pennmush.org/code/${ORIG_PN}/${ORIG_PN}-${PV}.tar.gz"
+
+DIFF_EXCLUDES="Makefile"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	# log2 is a macro in <math.h>, not an exported function
+	cygconf ac_cv_func_log2=yes
+	cygpatch ${C}/log2.patch
+	cygmake -j1 all opt
+}

@@ -1,0 +1,9 @@
+category: OCaml
+requires: cygwin ocaml
+sdesc: "OCaml math library"
+ldesc: "Mathlib is a collection of hopefully-useful functions for 
+working with floats, Complex numbers, and random numbers. It has the 
+basic math functions added to the C99 (If your libc has them), 
+trigonometric functions for complex numbers, the Mersenne Twister random 
+number generator, and modules for generating random numbers in a variety 
+of distributions."

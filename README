@@ -1,0 +1,93 @@
+ocaml-mathlib
+------------------------------------------
+Mathlib is a collection of hopefully-useful functions for working with 
+floats, Complex numbers, and random numbers. It has the basic math 
+functions added to the C99 (If your libc has them), trigonometric 
+functions for complex numbers, the Mersenne Twister random number 
+generator, and modules for generating random numbers in a variety of 
+distributions.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  ocaml-3.10.0-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.25-7
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  ocaml-findlib-1.2.1-1
+
+Canonical website:
+  http://raevnos.pennmush.org/code/mathlib/
+
+Canonical download:
+  http://raevnos.pennmush.org/code/mathlib/
+
+-------------------------------------------
+
+Build instructions:
+  unpack ocaml-mathlib-0.11.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ocaml-mathlib-0.11.1-X.cygport all
+
+This will create:
+  /usr/src/ocaml-mathlib-0.11.1-X-src.tar.bz2
+  /usr/src/ocaml-mathlib-0.11.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/ocaml/3.10/mathlib/META
+  /usr/lib/ocaml/3.10/mathlib/complexer.cmi
+  /usr/lib/ocaml/3.10/mathlib/complexer.cmx
+  /usr/lib/ocaml/3.10/mathlib/complexer.mli
+  /usr/lib/ocaml/3.10/mathlib/constant.cmi
+  /usr/lib/ocaml/3.10/mathlib/constant.cmx
+  /usr/lib/ocaml/3.10/mathlib/constant.mli
+  /usr/lib/ocaml/3.10/mathlib/float.cmi
+  /usr/lib/ocaml/3.10/mathlib/float.cmx
+  /usr/lib/ocaml/3.10/mathlib/float.mli
+  /usr/lib/ocaml/3.10/mathlib/genops.cmi
+  /usr/lib/ocaml/3.10/mathlib/genops.cmx
+  /usr/lib/ocaml/3.10/mathlib/genops.mli
+  /usr/lib/ocaml/3.10/mathlib/libmathlib_stubs.a
+  /usr/lib/ocaml/3.10/mathlib/math.cmi
+  /usr/lib/ocaml/3.10/mathlib/math.cmx
+  /usr/lib/ocaml/3.10/mathlib/math.mli
+  /usr/lib/ocaml/3.10/mathlib/mathlib.a
+  /usr/lib/ocaml/3.10/mathlib/mathlib.cma
+  /usr/lib/ocaml/3.10/mathlib/mathlib.cmxa
+  /usr/lib/ocaml/3.10/mathlib/mersenne.cmi
+  /usr/lib/ocaml/3.10/mathlib/mersenne.cmx
+  /usr/lib/ocaml/3.10/mathlib/mersenne.mli
+  /usr/lib/ocaml/3.10/mathlib/numref.cmi
+  /usr/lib/ocaml/3.10/mathlib/numref.cmx
+  /usr/lib/ocaml/3.10/mathlib/numref.mli
+  /usr/lib/ocaml/3.10/mathlib/rand.cmi
+  /usr/lib/ocaml/3.10/mathlib/rand.cmx
+  /usr/lib/ocaml/3.10/mathlib/rand.mli
+  /usr/lib/ocaml/3.10/mathlib/vector.cmi
+  /usr/lib/ocaml/3.10/mathlib/vector.cmx
+  /usr/lib/ocaml/3.10/mathlib/vector.mli
+  /usr/lib/ocaml/3.10/stublibs/dllmathlib_stubs.so
+  /usr/lib/ocaml/3.10/stublibs/dllmathlib_stubs.so.owner
+  /usr/share/doc/ocaml-mathlib-0.11.1/Changes
+  /usr/share/doc/ocaml-mathlib-0.11.1/LICENSE
+  /usr/share/doc/ocaml-mathlib-0.11.1/README
+
+------------------
+
+Port Notes:
+
+----- version 0.11.1-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
