@@ -1,5 +1,5 @@
 category: OCaml
-requires: cygwin ocaml
+requires: ocaml
 sdesc: "OCaml math library"
 ldesc: "Mathlib is a collection of hopefully-useful functions for 
 working with floats, Complex numbers, and random numbers. It has the 
